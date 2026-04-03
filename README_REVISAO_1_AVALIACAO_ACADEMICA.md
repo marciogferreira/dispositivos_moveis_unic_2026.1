@@ -1,5 +1,6 @@
 # 📚 Revisão – Expo e React Native
 
+
 O Expo é uma ferramenta que simplifica o desenvolvimento de aplicativos com React Native. Ele elimina a necessidade de configurar manualmente ambientes nativos como Android Studio ou Xcode, permitindo que o desenvolvedor foque diretamente no código.
 
 A criação de um projeto com Expo é feita por meio de um comando executado no terminal utilizando Node.js, que gera automaticamente toda a estrutura inicial do aplicativo.
