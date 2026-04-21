@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    
+    <div id="caixa" style="color: red; font-size: 40px;">
+        <p>Teste</p>
+    </div>
+    <button onclick="adicionarCSS()" id="btn-acao">Acao</button>
+    <script>
+        function adicionarCSS() {
+            const div = document.getElementById('caixa')
+            div.style.color = 'blue'
+            div.style.backgroundColor = 'yellow'
+        }
+        const btn = document.getElementById('btn-acao')
+        btn.style.backgroundColor = 'green'
+        btn.style.color = 'white'
+    </script>
+</body>
+</html>

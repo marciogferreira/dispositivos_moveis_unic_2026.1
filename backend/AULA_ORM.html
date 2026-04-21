@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Sequelize + MySQL2</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Reveal.js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/dracula.css">
+
+  <style>
+    img {
+      max-height: 300px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- SLIDE 1 -->
+<section>
+  <h2>Sequelize + MySQL2</h2>
+  <p>ORM no Node.js</p>
+</section>
+
+<!-- SLIDE 2 -->
+<section>
+  <h2>O que é ORM?</h2>
+  <p>ORM (Object Relational Mapping)</p>
+  <ul>
+    <li>Mapeia tabelas → objetos</li>
+    <li>Evita escrever SQL manual</li>
+    <li>Facilita manutenção</li>
+  </ul>
+  <img src="https://miro.medium.com/v2/resize:fit:800/1*5Wn3K2uF5Kk3O3s3mZb1Tw.png">
+</section>
+
+<!-- SLIDE 3 -->
+<section>
+  <h2>Sem ORM</h2>
+  <pre><code>
+SELECT * FROM usuarios WHERE login = 'admin';
+  </code></pre>
+</section>
+
+<!-- SLIDE 4 -->
+<section>
+  <h2>Com ORM</h2>
+  <pre><code>
+User.findOne({ where: { login: 'admin' } });
+  </code></pre>
+</section>
+
+<!-- SLIDE 5 -->
+<section>
+  <h2>Sequelize</h2>
+  <ul>
+    <li>ORM para Node.js</li>
+    <li>Suporta MySQL, Postgres, SQLite</li>
+    <li>Baseado em Promises</li>
+  </ul>
+</section>
+
+<!-- SLIDE 6 -->
+<section>
+  <h2>Instalação</h2>
+  <pre><code>
+npm init -y
+npm install sequelize mysql2
+  </code></pre>
+</section>
+
+<!-- SLIDE 7 -->
+<section>
+  <h2>Conexão com MySQL</h2>
+  <pre><code>
+const { Sequelize } = require('sequelize');
+
+const sequelize = new Sequelize(
+  'banco',
+  'root',
+  'senha',
+  {
+    host: 'localhost',
+    dialect: 'mysql'
+  }
+);
+  </code></pre>
+</section>
+
+<!-- SLIDE 8 -->
+<section>
+  <h2>Executando SQL direto</h2>
+  <pre><code>
+const [results] = await sequelize.query(
+  "SELECT * FROM usuarios"
+);
+console.log(results);
+  </code></pre>
+</section>
+
+<!-- SLIDE 9 -->
+<section>
+  <h2>Model Usuário</h2>
+  <pre><code>
+const { DataTypes } = require('sequelize');
+
+const User = sequelize.define('User', {
+  nome: DataTypes.STRING,
+  login: DataTypes.STRING,
+  senha: DataTypes.STRING
+});
+  </code></pre>
+</section>
+
+<!-- SLIDE 10 -->
+<section>
+  <h2>Criar Tabela</h2>
+  <pre><code>
+await sequelize.sync();
+  </code></pre>
+</section>
+
+<!-- SLIDE 11 -->
+<section>
+  <h2>CREATE</h2>
+  <pre><code>
+await User.create({
+  nome: 'Márcio',
+  login: 'marcio',
+  senha: '123'
+});
+  </code></pre>
+</section>
+
+<!-- SLIDE 12 -->
+<section>
+  <h2>READ</h2>
+  <pre><code>
+const users = await User.findAll();
+console.log(users);
+  </code></pre>
+</section>
+
+<!-- SLIDE 13 -->
+<section>
+  <h2>UPDATE</h2>
+  <pre><code>
+await User.update(
+  { nome: 'Novo Nome' },
+  { where: { id: 1 } }
+);
+  </code></pre>
+</section>
+
+<!-- SLIDE 14 -->
+<section>
+  <h2>DELETE</h2>
+  <pre><code>
+await User.destroy({
+  where: { id: 1 }
+});
+  </code></pre>
+</section>
+
+<!-- SLIDE 15 -->
+<section>
+  <h2>Fluxo ORM</h2>
+  <img src="https://sequelize.org/img/diagram.png">
+</section>
+
+<!-- SLIDE 16 -->
+<section>
+  <h2>Vantagens</h2>
+  <ul>
+    <li>Produtividade</li>
+    <li>Menos SQL manual</li>
+    <li>Portabilidade de banco</li>
+  </ul>
+</section>
+
+<!-- SLIDE 17 -->
+<section>
+  <h2>Desvantagens</h2>
+  <ul>
+    <li>Performance em queries complexas</li>
+    <li>Curva de aprendizado</li>
+  </ul>
+</section>
+
+<!-- SLIDE FINAL -->
+<section>
+  <h2>Conclusão</h2>
+  <p>Sequelize facilita muito o desenvolvimento com banco de dados no Node.js 🚀</p>
+</section>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.js"></script>
+<script>
+  Reveal.initialize();
+</script>
+
+</body>
+</html>
