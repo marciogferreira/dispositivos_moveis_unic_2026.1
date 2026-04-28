@@ -1,24 +1,22 @@
 const { createServer } = require('node:http')
-const conexao = require('./src/config/conexao.js')
-const UserModel = require('./src/model/UserModel.js')
+const UserController = require('./src/controllers/UserController.js')
+const app = createServer(async (request, response, next) => {
 
-const app = createServer((request, response, next) => {
 
-    if(request.url === '/criar-usuario') {
-        
-        UserModel.create({
-            name: 'Marcio Ferreira',
-            login: 'marcio.ferreira',
-            password: '123456'
-        })
-
-        response.writeHead(200, {'Content-type': 'application/pdf'})
-        return response.end('PDF')
+    if(request.url === '/usuarios' && request.method === 'GET') {
+        const data = await UserController.findAll()
+        response.writeHead(200, {'Content-type': 'text/json'})
+        return response.end(JSON.stringify(data))
     }
 
-    if(request.url === '/imagem') {
-        response.writeHead(200, {'Content-type': 'image/jpeg'})
-        return response.end('IMAGEM')
+    if(request.url === '/criar-usuarios' && request.method === 'GET') {
+        const data = await UserController.create({
+            name: 'Jose Silva',
+            login: 'jose.silva',
+            password: 'senha123'
+        })
+        response.writeHead(200, {'Content-type': 'text/json'})
+        return response.end(JSON.stringify(data))
     }
 
     response.writeHead(200, {'Content-type': 'text/html'})
