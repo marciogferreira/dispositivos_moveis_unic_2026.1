@@ -1,0 +1,6 @@
+Comandos para Instalar 
+
+npx create-react-app@latest
+cd nome_projeto
+npm run reset-project
+npm run web
