@@ -1,8 +1,10 @@
 const express = require('express');
 const UserController = require('../controllers/UserController.js');
+const AuthController = require('../controllers/AuthController.js');
 const UserRoutes = express.Router();
 
 // Logica
+UserRoutes.post('/login', AuthController.login)
 UserRoutes.get('/usuarios', UserController.findAll);
 UserRoutes.get('/usuarios/:id', UserController.findById);
 UserRoutes.post('/usuarios', UserController.create);

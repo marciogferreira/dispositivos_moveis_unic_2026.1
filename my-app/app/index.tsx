@@ -1,10 +1,16 @@
+import { useRouter } from "expo-router";
+import React from "react";
 import { Button, Text, View } from "react-native";
 import Card from "./src/components/Card";
-
 export default function Index() {
+  const router = useRouter();
+  let autenticado = false;
   function handleButtonPress() {
     alert("Botão pressionado!");
+    router.push("/login");
   }
+
+  React.useEffect(() => {}, []);
 
   return (
     <View

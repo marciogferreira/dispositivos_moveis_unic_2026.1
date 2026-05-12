@@ -2,6 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const UserRoutes = require('./src/routes/UserRoutes.js')
 const app = express()
+app.use(express.json())
 app.use(cors({origin: '*'}))
 
 // Primeira Rota
