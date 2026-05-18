@@ -1,0 +1,270 @@
+# Desafio Prático — Desenvolvimento Mobile com React Native + Expo
+
+## Disciplina
+
+Desenvolvimento para Dispositivos Móveis com React Native e Expo
+
+## Objetivo
+
+Os alunos deverão criar uma **MVP (Minimum Viable Product)** de um aplicativo mobile utilizando:
+
+- React Native
+- Expo
+- Expo Router ou React Navigation
+- Componentes reutilizáveis
+- Consumo de dados local ou API
+- Boas práticas de interface e usabilidade
+
+O projeto deverá simular uma solução real para um problema do cotidiano, mercado ou ambiente acadêmico.
+
+---
+
+# Formação dos Grupos
+
+- Cada grupo deverá conter:
+  - Mínimo: 3 alunos
+  - Máximo: 5 alunos
+
+Cada integrante deverá possuir uma função definida:
+
+| Função                      | Responsabilidade              |
+| --------------------------- | ----------------------------- |
+| Product Owner               | Organização da ideia e regras |
+| UI/UX Designer              | Protótipo e identidade visual |
+| Desenvolvedor Front-end     | Telas e componentes           |
+| Desenvolvedor de Integração | APIs, dados e lógica          |
+| Apresentador                | Demonstração final            |
+
+---
+
+# Tema do Projeto
+
+Cada grupo deverá criar uma startup fictícia e desenvolver um aplicativo mobile funcional.
+
+## Sugestões de Temas
+
+- Delivery universitário
+- Controle financeiro
+- Agenda acadêmica
+- Marketplace local
+- Aplicativo fitness
+- Biblioteca virtual
+- Gestão de tarefas
+- App de eventos
+- Rede social acadêmica
+- Aplicativo de estudos
+- Caronas universitárias
+- Controle de despesas
+- Gestão de estoque
+- App de receitas
+- Turismo local
+
+---
+
+# Requisitos Obrigatórios
+
+## O aplicativo deve possuir no mínimo 5 telas:
+
+### Exemplo de estrutura
+
+1. Tela Splash / Inicial
+2. Tela de Login ou Cadastro
+3. Tela Home / Dashboard
+4. Tela de Listagem
+5. Tela de Detalhes
+6. Tela de Perfil
+7. Tela de Configurações
+
+---
+
+# Funcionalidades Obrigatórias
+
+O App deve possuir:
+
+- Navegação entre telas
+- Componentização
+- Uso de Hooks
+- Estado global ou local
+- Formulários
+- Validação simples
+- Responsividade
+- Estilização organizada
+- Ícones e identidade visual
+- Armazenamento local OU API
+
+---
+
+# Tecnologias Permitidas
+
+## Obrigatórias
+
+- React Native
+- Expo
+
+## Opcionais
+
+- Expo Router
+- React Navigation
+- NativeWind
+- Axios
+- AsyncStorage
+- Supabase
+- Firebase
+- Context API
+- Zustand
+
+---
+
+# Estrutura Mínima do Projeto
+
+```bash
+src/
+ ├── components/
+ ├── screens/
+ ├── services/
+ ├── hooks/
+ ├── routes/
+ ├── styles/
+ └── assets/
+```
+
+---
+
+# Entregáveis
+
+Cada grupo deverá entregar:
+
+## 1. Código Fonte
+
+Projeto funcionando via Expo:
+
+```bash
+npx expo start
+```
+
+---
+
+## 2. Apresentação
+
+A apresentação deverá conter:
+
+- Nome da startup
+- Problema resolvido
+- Público-alvo
+- Tecnologias utilizadas
+- Demonstração das telas
+- Explicação da arquitetura
+- Dificuldades encontradas
+- Melhorias futuras
+
+---
+
+## 3. MVP Funcional
+
+O aplicativo deve estar navegável e funcional.
+
+Mesmo sem backend completo, a experiência do usuário deve ser simulada corretamente.
+
+---
+
+# Critérios de Avaliação
+
+| Critério                 | Pontos |
+| ------------------------ | ------ |
+| Organização do Projeto   | 2      |
+| Qualidade Visual         | 2      |
+| Funcionalidades          | 2      |
+| Navegação e UX           | 2      |
+| Código e Componentização | 2      |
+
+Total: 10 pontos
+
+---
+
+# Diferenciais (Pontuação Extra)
+
+## Extras possíveis
+
+- Integração com API real
+- Login social
+- Dark mode
+- Geolocalização
+- Push notifications
+- Upload de imagens
+- Banco online
+- Animações
+- Offline first
+- Testes automatizados
+
+---
+
+# Exemplo de MVP
+
+## Aplicativo: UniTask
+
+### Objetivo
+
+Aplicativo para estudantes organizarem atividades acadêmicas.
+
+### Telas
+
+1. Splash
+2. Login
+3. Dashboard
+4. Lista de Tarefas
+5. Detalhes da Tarefa
+6. Perfil
+
+### Funcionalidades
+
+- Cadastro de tarefas
+- Marcação de conclusão
+- Filtro por disciplina
+- Perfil do aluno
+- Armazenamento local
+
+---
+
+# Requisitos Técnicos da Apresentação
+
+A apresentação deverá ser realizada:
+
+- Diretamente pelo Expo Go
+- Emulador Android/iOS
+- Ou Web pelo Expo
+
+Cada grupo terá:
+
+- 15 minutos de apresentação
+- 5 minutos para perguntas
+
+---
+
+# Penalidades
+
+Perderão pontos projetos que:
+
+- Não utilizarem Expo
+- Possuírem menos de 5 telas
+- Não apresentarem navegação
+- Estiverem incompletos
+- Não funcionarem na apresentação
+
+---
+
+# Data de Entrega
+
+Definir em sala.
+
+---
+
+# Objetivo Final
+
+O foco do desafio é fazer com que os alunos:
+
+- Trabalhem em equipe
+- Desenvolvam pensamento de produto
+- Criem uma MVP real
+- Aprendam arquitetura mobile
+- Utilizem React Native na prática
+- Simulem um ambiente profissional de desenvolvimento mobile
